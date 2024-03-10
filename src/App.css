@@ -212,9 +212,11 @@ input, label{
 
 .orderbtn{
   padding: 5px 12px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 600;
+  display: block;
 }
 
 footer section{
