@@ -36,8 +36,8 @@ const Menu = () => {
             <img src={recipe.image} alt={recipe.title} />
             <div className="menu-content">
               <div className="heading">
-                <h5>{recipe.title}</h5>
-                <p>{recipe.price}</p>
+                <h3>{recipe.title}</h3>
+                <h4>{recipe.price}</h4>
               </div>
               {recipe.description}
               <button
