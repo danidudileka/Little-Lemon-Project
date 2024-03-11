@@ -5,7 +5,7 @@ const BookingForm = (props) => {
   const [date, setDate] = useState("");
   const [times, setTimes] = useState("");
   const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState("");
+  const [occasion, setOccasion] = useState("None");
 
   const navigate = useNavigate();
   function handleSubmit(e) {
@@ -19,9 +19,6 @@ const BookingForm = (props) => {
     props.dispatch(e);
   };
 
-  useEffect(() => {
-    console.log(occasion);
-  }, [occasion]);
   return (
     <header>
       <section>
@@ -44,6 +41,7 @@ const BookingForm = (props) => {
                 id="book-time"
                 value={times}
                 onChange={(e) => setTimes(e.target.value)}
+                required
               >
                 <option value="">Select a Time</option>
                 {props.availableTimes.availableTimes.map((availableTimes) => {
@@ -71,6 +69,7 @@ const BookingForm = (props) => {
                 key={occasion}
                 onChange={(e) => setOccasion(e.target.value)}
               >
+                <option>None</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
               </select>

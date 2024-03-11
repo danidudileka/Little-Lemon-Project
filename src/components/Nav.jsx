@@ -5,11 +5,11 @@ import { IoClose } from "react-icons/io5";
 
 export const NavBarItems = [
   { name: "Home", url: "/" },
-  { name: "About", url: "#" },
-  { name: "Menu", url: "#" },
+  { name: "About", url: "/" },
+  { name: "Menu", url: "/" },
   { name: "Reservations", url: "/booking" },
-  { name: "Order Online", url: "#" },
-  { name: "Login", url: "#" },
+  { name: "Order Online", url: "/" },
+  { name: "Login", url: "/" },
 ];
 
 const Nav = () => {

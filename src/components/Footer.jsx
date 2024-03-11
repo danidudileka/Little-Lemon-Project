@@ -55,6 +55,7 @@ const Footer = () => {
           </ul>
         </div>
       </section>
+      <p align='center'>Created by Danidu Dileka</p>
     </footer>
   );
 };

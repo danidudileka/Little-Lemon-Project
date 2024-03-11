@@ -103,6 +103,10 @@ button {
   cursor: pointer;
 }
 
+button:hover{
+  box-shadow: 4px 4px 4px var(--shadow);
+}
+
 .banner-img {
   position: absolute;
   right: 13%;
@@ -213,10 +217,6 @@ label {
   display: block;
   border-radius: 8px;
   background-color: var(--primary-yellow);
-}
-
-.orderbtn:hover{
-  box-shadow: 4px 4px 4px var(--shadow);
 }
 
 footer section {
