@@ -4,8 +4,6 @@ import Nav from "./components/Nav";
 import Main from "./components/Main";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
-import ConfirmedBooking from "./components/ConfirmedBooking";
-import { Route, Router, Routes } from "react-router-dom";
 
 function App() {
   return (
