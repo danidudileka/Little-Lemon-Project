@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BookingForm = (props) => {
   const [date, setDate] = useState("");
   const [times, setTimes] = useState("");
-  const [guests, setGuests] = useState("");
+  const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("");
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  function handleSubmit(e) {
     e.preventDefault();
-    props.SubmitForm(e);
-  };
+    navigate("/confirmed");
+    props.SubmitForm(e); //API is not working so needed to added useNavigate before this
+  }
 
   const handleChange = (e) => {
     setDate(e);
     props.dispatch(e);
   };
+
+  useEffect(() => {
+    console.log(occasion);
+  }, [occasion]);
   return (
     <header>
       <section>
@@ -70,11 +77,12 @@ const BookingForm = (props) => {
             </div>
 
             <div className="btnReceive">
-              <input
-                type="button"
+              <button
+                type="submit"
                 area-label="on Click"
-                value={"Make Your Reservation"}
-              />
+              >
+                Make Your Reservation
+              </button>
             </div>
           </fieldset>
         </form>
